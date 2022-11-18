@@ -37,7 +37,7 @@ Messages to the `AWS_IOT_SUBSCRIBE_TOPIC` queue are expected to be in the below 
 
 To open the garage door, you just need to send a message of the above format to the `AWS_IOT_SUBSCRIBE_TOPIC` topic. There are some size restrictions on values for `fixed` and `rolling` described [here](https://github.com/argilo/secplus). 
 
-To train your gargage door opener, you can usually just push the physical learn button on the opener, and send the above message. Once trained, you should be able to send the preivous `rolling+3` and have things open.
+To train your gargage door opener, you can usually just push the physical learn button on the opener, and send the above message. Once trained, you should be able to send the previous `rolling+3` and have things open.
 
 ***What if I want to clone an existing opener?*** This is probably not the greatest idea because eventually your original opener and this one will grow out of sync. But if you want to do it, all you need to do is use an SDR (e.g., an RTL-SDR) and rtl-433 to obtain the fixed code and current rolling code value for your existing opener. Then you can just transmit that same fixed code, and a bigger rolling code. 
 
@@ -45,4 +45,4 @@ To train your gargage door opener, you can usually just push the physical learn 
 
 ## Credits
 
-Big thanks to [Clayton Smith](https://github.com/argilo/) for reverse engineering the Security+ protocol and building an excellent [reference implication](https://github.com/argilo/secplus/). Equally many thanks to [LSatan](https://github.com/LSatan/) for making it easy to use the CC101 on microcontoller projects via this [excellent library](https://github.com/LSatan/SmartRC-CC1101-Driver-Lib).
+Big thanks to [Clayton Smith](https://github.com/argilo/) for reverse engineering the Security+ protocol and building an excellent [reference implementation](https://github.com/argilo/secplus/). Equally many thanks to [LSatan](https://github.com/LSatan/) for making it easy to use the CC101 on microcontoller projects via this [excellent library](https://github.com/LSatan/SmartRC-CC1101-Driver-Lib).
